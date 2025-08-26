@@ -1,3 +1,5 @@
+console.log("Connected")
+
 let userDetails = {
     balance : localStorage.getItem("balance") || 0,
     loggedIn: localStorage.getItem("loggedIn") || false,
@@ -21,19 +23,19 @@ let amount = userDetails["balance"];
 
 document.getElementById('balance').innerText = "$" + amount;
 
-document.getElementById('add-money-btn').addEventListener('click', function(){
-    let bankNum = document.getElementById("bankAccountNum").value;
+document.getElementById('cash-out-btn').addEventListener('click', function(){
+    let bankNum = document.getElementById("agentAccount").value;
     let bankAmount = document.getElementById("bankAmount").value;
     let accountPin = document.getElementById("accountPin").value;
 
-    if(bankNum.length === 11 && parseInt(bankAmount) > 0){
+    if(bankNum.length === 11 && parseInt(bankAmount) > 0 && parseInt(bankAmount) - localStorage.getItem("balance") < 0){
         if(parseInt(accountPin) === 1234){
-            userDetails["balance"] = parseInt(userDetails["balance"]) + parseInt(bankAmount);
+            userDetails["balance"] = parseInt(userDetails["balance"]) - parseInt(bankAmount);
             localStorage.setItem("balance", userDetails["balance"]);
 
             document.getElementById('balance').innerText = "$" + userDetails["balance"];
 
-            document.getElementById("bankAccountNum").value = "";
+            document.getElementById("agentAccount").value = "";
             document.getElementById("bankAmount").value = "";
             document.getElementById("accountPin").value = "";
 
@@ -43,7 +45,6 @@ document.getElementById('add-money-btn').addEventListener('click', function(){
     }
 });
 
-
-document.getElementById("go-cash-out").addEventListener('click', function(){
-    window.location.href = "./cash-out.html";
+document.getElementById("go-add-money").addEventListener('click', function(){
+    window.location.href = "./add-money.html";
 });

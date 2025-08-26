@@ -1,3 +1,9 @@
+let isUserLoggedIn = localStorage.getItem("loggedIn");
+
+if(isUserLoggedIn === "true"){
+    window.location.href = "./add-money.html";
+}
+
 document.getElementById('login-btn').addEventListener("click", function(e){
     // console.log("clicked");
     // e.preventDefault(); // Prevents reload on button press
@@ -11,6 +17,7 @@ document.getElementById('login-btn').addEventListener("click", function(e){
         // let loginSection = document.getElementById("loginSection");
         // loginSection.classList.add("hidden");
 
+        localStorage.setItem("loggedIn", "true");
         window.location.href = "./add-money.html";
         
     } else{
