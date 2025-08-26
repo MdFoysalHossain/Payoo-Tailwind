@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo - Cash Out</title>
+
+    <!-- Tailwind Css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link rel="stylesheet" href="/css/tailwind.css"> -->
+
+    <!-- Daisyui Css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" /> -->
+
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-start items-center">
+    <header class="border-b-[1px] w-[400px] flex flex-row justify-between py-5">
+        <div class="left-side flex flex-row">
+            <img class="w-[50px]" src="assets/Group.png" alt="">
+            <div class="left-details flex flex-col justify-center">
+                <span id="balance" class="font-bold text-[18px]">$45000</span>
+                <span class="text-gray-500"> Available Balance</span>
+            </div>
+        </div>
+        <div class="right-side">
+            <button class="btn text-gray-500 rounded-[10px]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log Out</button>
+        </div>
+    </header>
+
+    <section class="welcome flex flex-col w-[400px] my-3">
+        <p class="text-3xl font-bold mb-5">🔥 Welcome to Payoo!</p>
+        <span class="text-gray-500 text">Enjoy easy and convenient financial services with us. Cashout charge is low and </span>
+    </section>
+
+    <section class="all-options grid-cols-3 grid-rows-2 grid gap-2">
+        <div class="single-option py-5 px-2 flex flex-col justify-center items-center gap-2 border-[1px] rounded-2xl border-gray-300 hover:border-blue-400 hover:bg-blue-50">
+            <img class="w-[30px]" src="assets/wallet1.png" alt="Add Money">
+            <span class="text-gray-800 font-semibold">Add Money</span>
+        </div>
+        <div class="single-option py-5 px-2 flex flex-col justify-center items-center gap-2 border-[1px] rounded-2xl border-gray-300 hover:border-blue-400 hover:bg-blue-50">
+            <img class="w-[30px]" src="assets/send1.png" alt="Add Money">
+            <span class="text-gray-800 font-semibold">Cashout</span>
+        </div>
+        <div class="single-option py-5 px-2 flex flex-col justify-center items-center gap-2 border-[1px] rounded-2xl border-gray-300 hover:border-blue-400 hover:bg-blue-50">
+            <img class="w-[30px]" src="assets/money1.png" alt="Add Money">
+            <span class="text-gray-800 font-semibold text-[16px]">Transfer Money</span>
+        </div>
+
+        <div class="single-option py-5 px-2 flex flex-col justify-center items-center gap-2 border-[1px] rounded-2xl border-gray-300 hover:border-blue-400 hover:bg-blue-50">
+            <img class="w-[30px]" src="assets/bonus1.png" alt="Add Money">
+            <span class="text-gray-800 font-semibold">Get Bonus</span>
+        </div>
+        <div class="single-option py-5 px-2 flex flex-col justify-center items-center gap-2 border-[1px] rounded-2xl border-gray-300 hover:border-blue-400 hover:bg-blue-50">
+            <img class="w-[30px]" src="assets/purse1.png" alt="Add Money">
+            <span class="text-gray-800 font-semibold">Pay Bill</span>
+        </div>
+        <div class="single-option py-5 px-2 flex flex-col justify-center items-center gap-2 border-[1px] rounded-2xl border-gray-300 hover:border-blue-400 hover:bg-blue-50">
+            <img class="w-[30px]" src="assets/transaction1.png" alt="Add Money">
+            <span class="text-gray-800 font-semibold text-[16px]">Transaction</span>
+        </div>
+    </section>
+
+    <section class="add-money">
+        <h1 class="font-bold mt-5 mb-3">Cash Out</h1>
+        <div class="form-fill w-[400px] bg-white p-5 rounded-3xl">
+            <form class="flex flex-col gap-2.5">
+
+                <label for="agentAccount" class="text-gray-600 font-semibold">Agent Number</label>
+                <input id="agentAccount" type="text" placeholder="Enter 11 digit number" class="input w-full rounded-3xl py-6 px-4 focus:outline-0 border-0 bg-[#F4F5F7]"/>
+
+                <label for="bankAmount" class="text-gray-600 font-semibold">Enter Amount</label>
+                <input id="bankAmount" type="text" placeholder="Enter amount to withdraw" class="input w-full rounded-3xl py-6 px-4 focus:outline-0 border-0 bg-[#F4F5F7]"/>
+
+                <label for="accountPin" class="text-gray-600 font-semibold">Pin Number</label>
+                <input id="accountPin" type="text" placeholder="Enter 4 digit pin number" class="input w-full rounded-3xl py-6 px-4 focus:outline-0 border-0 bg-[#F4F5F7]"/>
+
+                <button type="button" id="cash-out-btn" class="btn bg-[#0874F2] py-5 text-white rounded-3xl font-semibold">Cash Out</button>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="js/add-money.js"></script>
+</body>
+</html>

@@ -2,17 +2,19 @@ document.getElementById('login-btn').addEventListener("click", function(e){
     // console.log("clicked");
     // e.preventDefault(); // Prevents reload on button press
 
-    let userNum = document.getElementById("userNumer").value;
-    let userPin = document.getElementById("userPin").value;
+    let userNum = parseInt(document.getElementById("userNumer").value);
+    let userPin = parseInt(document.getElementById("userPin").value);
     console.log(userNum);
-    console.log(userPin.length);
+    console.log(userPin);
 
-    if(userNum.length === 11 && userPin.length > 3){
-        let loginSection = document.getElementById("loginSection");
-        loginSection.classList.add("hidden");
+    if(userNum == 1234567890 && userPin == 1234){
+        // let loginSection = document.getElementById("loginSection");
+        // loginSection.classList.add("hidden");
+
+        window.location.href = "./add-money.html";
         
-    } else if(userNum.length !== 11 || userPin.length <= 3){
-        alert("Number mustbe 11 Digits and Pin should be more then 3 Digits");
+    } else{
+        alert("Number: 1234567890 \nPin: 1234");
     }
 
 });
