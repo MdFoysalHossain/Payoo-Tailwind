@@ -15,19 +15,26 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" /> -->
 </head>
 <body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center">
-    <section class="login">
+    <section id="loginSection" class="login flex flex-col justify-center items-center">
+        
+        <div class="login-back h-[150px] w-[300px] bg-[url('assets/bg.png')] bg-cover flex justify-center items-center">
+            <img src="assets/Group.png" alt="Logo" >
+        </div>
 
         <div class="login-form bg-white p-8 rounded-2xl">
             <form class="flex flex-col gap-2.5 w-[300px]">
                 <label for="number" class="font-semibold">Mobile Number</label>
-                <input type="text" placeholder="Enter Your Number" class="input w-full rounded-3xl py-6 px-4 focus:outline-0 border-0 bg-[#F4F5F7]"/>
+                <input id="userNumer" type="text" placeholder="Enter Your Number" class="input w-full rounded-3xl py-6 px-4 focus:outline-0 border-0 bg-[#F4F5F7]"/>
                 <label for="pin" class="font-semibold">4 Digit Pin</label>
-                <input type="text" placeholder="Enter 4 Digit Pin" class="input w-full rounded-3xl py-6 px-4 focus:outline-0 border-0 bg-[#F4F5F7]"/>
-                <button class="btn bg-[#0874F2] py-5 text-white rounded-3xl font-semibold" type="submit">Login</button>
+                <input id="userPin" type="text" placeholder="Enter 4 Digit Pin" class="input w-full rounded-3xl py-6 px-4 focus:outline-0 border-0 bg-[#F4F5F7]"/>
+                <!-- <button id="login-btn" class="btn bg-[#0874F2] py-5 text-white rounded-3xl font-semibold">Login</button> -->
+                <button type="button" id="login-btn" class="btn bg-[#0874F2] py-5 text-white rounded-3xl font-semibold">Login</button>
             </form>
         </div>
         
     </section>
     
+
+    <script src="js/script.js"></script>
 </body>
 </html>
